@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Serving Files --- Page 3</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+             integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47"
+             crossorigin="anonymous">
+    <script>
+      function processInput() {
+          var uName = document.getElementById("username").value;
+          var pwd = document.getElementById("pswd").value;
+          console.log(uName + " " + pwd);
+          if (uName == '' || pwd == '') {
+              alert('Both fields must be entered.');
+          } else {
+              alert('Username is: ' + uName + "\nPassword is: " + pwd);
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <h1><i>Hello</i></h1>
+    <h2>This is <u>page3.html</u></h2>
+    <form class="pure-form">
+        <fieldset class="pure-group">
+            <input id="username" type="text" class="pure-input" placeholder="Username">
+            <input id="pswd" type="text" class="pure-input" placeholder="Password">
+            <br><br>
+            <a class="pure-button" href="javascript:processInput()">Submit</a>
+        </fieldset>
+    </form>
+    <a class="pure-button" href='/'>Home</a>
+  </body>
+</html>

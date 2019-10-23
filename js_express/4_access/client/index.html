@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>index.html</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+             integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47"
+             crossorigin="anonymous">
+    <style>
+      div {
+          display: flex;
+          width: 60%;
+          height: 60vh;
+          margin: 10px;
+          padding: 10px;
+          border: 2px solid black;
+          background-color: lightgrey;
+        }
+      body {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+      }
+    </style>
+    <script>
+      function processInput() {
+          const secretName = "abc";
+          const secretPwd = "123";
+          var uName = document.getElementById("username").value;
+          var pwd = document.getElementById("pswd").value;
+          console.log(uName + " " + pwd);
+          if (uName == '' || pwd == '') {
+              alert('Both fields must be entered.');
+          } else if (uName == secretName && pwd == secretPwd) {
+              // access authorised content
+              alert('Username is: ' + uName + "\nPassword is: " + pwd);
+              var myWindow = window.open("?1", "_self");
+          } else {  
+              // access regular content
+              var myWindow = window.open("?2", "_self");
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+        <form class="pure-form">
+            <fieldset class="pure-group">
+                <legend>User Login. Enter credentials to access material.</legend>
+                <input id="username" type="text" class="pure-input" placeholder="Username">
+                <input id="pswd" type="text" class="pure-input" placeholder="Password">
+                <br><br>
+                <a class="pure-button" href="javascript:processInput()">Submit</a>
+            </fieldset>
+        </form>
+    </div>
+  </body>
+</html>

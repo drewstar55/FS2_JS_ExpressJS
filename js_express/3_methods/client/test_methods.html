@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Test the POST Method</h1>
+    <p>Enter some text in the fields below, then press the "Submit" button to submit the form using POST.</p>
+    <br>
+    <form id="myForm1" action="http://localhost:3000" method="post">
+        First name: <input type="text" name="fname"><br>
+        Last name: <input type="text" name="lname"><br><br>
+        <input type="button" onclick="myFunction()" value="Submit">
+    </form>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myForm1").submit();
+        }
+    </script>
+    <br><br>
+    <h1>Test the GET Method</h1>
+    <p>Click on the submit button, and the input will be sent to a page using GET.</p>
+    <br>
+    <form id="myForm2" action="http://localhost:3000" method="get">
+        Favourite Song: <input type="text" name="song"><br>
+        Favourite Colour: <input type="text" name="colour"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <br><br>
+    <h1>Test the USE Method</h1>
+    <p>Click on the submit button.</p>
+    <br>
+    <form id="myForm3" action="http://localhost:3000" method="use">
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
